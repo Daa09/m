@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+int ch,top=-1,num,i,s[20];
+
+do 
+{
+printf("\n1.PUSH");
+printf("\n2.POP");
+printf("\n3.DISPLAY");
+printf("\n Enter your Choice:");
+scanf("%d",&ch);
+
+switch(ch)
+{
+case 1:
+printf("\n enter the number which you want to ass: ");
+scanf("%d", &num);
+top=top+1;
+s[top]=num;
+
+break;
+
+case 2:
+top=top-1;
+break;
+
+case 3:
+for(i=0;i<=top;i++)
+{
+printf("\t %d",s[i]);
+}
+
+break;
+
+}
+} while(ch<=3);
+
+return 0;
+
+}
