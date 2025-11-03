@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+    int ch,navin,f=-1,r=-1,a[10],i;
+    do
+    {
+        printf("\n Queue operations");
+        printf("\n 1. Enqueue");
+        printf("\n 2. Dequeue");
+        printf("\n 3. Display");
+        printf("\n enter your choice");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+                if(r==9)
+                {
+                    printf("\n queue full");
+                }
+                else
+                {
+                    printf("\n enter the number you want to add");
+                    scanf("%d",&navin);
+                    r=r+1;
+                    a[r]=navin;
+                    printf("\n elemenet %d added in queue",navin);
+                }
+                break;
+            case 2:
+                if(r==-1 || f==r)
+                {
+                    printf("\n queue empty");
+                }
+                else
+                {
+                    f=f+1;
+                    printf("\n%d element removed from queue",a[f]);
+                }
+                break;
+            case 3:
+                for(i=f+1;i<=r;i++)
+                {
+                    printf("\t %d",a[i]);
+                }
+                break;
+        }
+    }while(ch<=3);
+
+    return 0;
+}
